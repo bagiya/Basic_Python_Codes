@@ -1,0 +1,16 @@
+#Guess Number
+
+import random
+
+def guessing_number(x):
+    random_num = random.randint(1,x)
+    guess = 0
+    while guess != random_num:
+        guess = int(input(f"Enter a value between 1 and {x} : "))
+        if guess < random_num:
+            print("Enter a larger value than your guess:")
+        elif guess > random_num:
+            print("Enter a smaller value than your guess:")
+    print("Congrats ! You guessed it right")
+
+guessing_number(7)
